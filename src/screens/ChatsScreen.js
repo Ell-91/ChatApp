@@ -2,7 +2,7 @@ import { View, Text, FlatList } from "react-native";
 import  chats from '../../assets/data/chats.json'
 import ChatListItem from "../components/ChatListItem";
 
-const ChatScreen = () => {
+const ChatsScreen = () => {
     return (
         <View>
             <FlatList
@@ -12,4 +12,4 @@ const ChatScreen = () => {
         </View>
     )
 }
-export default ChatScreen
+export default ChatsScreen

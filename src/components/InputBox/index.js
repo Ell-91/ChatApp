@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { View, TextInput, StyleSheet } from "react-native";
+import { TextInput, StyleSheet } from "react-native";
 import { FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const InputBox= () => {
     const [newMessage, setNewMessage] = useState(''); ///useSate gives us an array of two values, destructuring values and saving them intoour contants
@@ -17,7 +18,7 @@ const InputBox= () => {
     return (
         //Listen to the onChangeText event for TextInput and everytime text input is changed we update the state
         //Listening for an update and updating the state value 
-        <View style={styles.container}>
+        <SafeAreaView edges={['bottom']} style={styles.container}>
             <FontAwesome name="plus" size={18} color="black" />
             <TextInput 
                 value={newMessage} 
@@ -25,7 +26,7 @@ const InputBox= () => {
                 style={styles.input} placeholder='type your message'
             />
             <MaterialCommunityIcons onPress={onSend} style={styles.send}name="send-outline" size={18} color="black" />
-        </View>
+        </SafeAreaView>
     )
 }
 

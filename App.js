@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-import ChatsScreen from './src/screens/ChatsScreen'
-import ChatScreen from './src/screens/ChatScreen'
-import Navigator from './src/navigation'
+import { StyleSheet, View } from 'react-native';
+import Navigator from './src/navigation';
+
+import { Amplify } from 'aws-amplify';
+import awsconfig from './src/aws-exports';
+
+Amplify.configure(awsconfig);
 
 export default function App() {
   return (

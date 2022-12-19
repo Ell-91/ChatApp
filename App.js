@@ -4,10 +4,12 @@ import Navigator from './src/navigation';
 
 import { Amplify } from 'aws-amplify';
 import awsconfig from './src/aws-exports';
+import { withAuthenticator } from 'aws-amplify-react-native'; //if something deals with interface it should come from aws-react native
 
-Amplify.configure(awsconfig);
 
-export default function App() {
+Amplify.configure({...awsconfig, Analytics: {disabled: true}});  //to disable analytics to get rid of error
+
+function App() {
   return (
     <View style={styles.container}>
       <Navigator/>
@@ -25,3 +27,5 @@ const styles = StyleSheet.create({
 
   },
 });
+
+export default withAuthenticator(App);

@@ -47,11 +47,11 @@ export const schema = {
                         ]
                     }
                 },
-                "ChatRooms": {
-                    "name": "ChatRooms",
+                "chatRooms": {
+                    "name": "chatRooms",
                     "isArray": true,
                     "type": {
-                        "model": "ChatRoomUser"
+                        "model": "UserChatRoom"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -222,11 +222,11 @@ export const schema = {
                         ]
                     }
                 },
-                "Users": {
-                    "name": "Users",
+                "users": {
+                    "name": "users",
                     "isArray": true,
                     "type": {
-                        "model": "ChatRoomUser"
+                        "model": "UserChatRoom"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -305,8 +305,8 @@ export const schema = {
                 }
             ]
         },
-        "ChatRoomUser": {
-            "name": "ChatRoomUser",
+        "UserChatRoom": {
+            "name": "UserChatRoom",
             "fields": {
                 "id": {
                     "name": "id",
@@ -377,7 +377,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "ChatRoomUsers",
+            "pluralName": "UserChatRooms",
             "attributes": [
                 {
                     "type": "model",
@@ -406,6 +406,6 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "codegenVersion": "3.3.2",
-    "version": "071767a5b0bf9737e6e943efadebab7b"
+    "codegenVersion": "3.4.0",
+    "version": "28452f819062050a3e3cba802d91c67e"
 };

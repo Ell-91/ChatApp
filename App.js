@@ -5,7 +5,7 @@ import Navigator from './src/navigation';
 
 import { Amplify, API, Auth, graphqlOperation } from 'aws-amplify';
 import awsconfig from './src/aws-exports';
-import { withAuthenticator } from 'aws-amplify-react-native'; //if something deals with interface it should come from aws-react native
+import { withAuthenticator } from 'aws-amplify-react-native'; //if something deals with user interface it should come from aws-react native otherwise it comes from aws amplify
 import { getUser } from './src/graphql/queries';
 import { createUser } from './src/graphql/mutations';
 
@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const syncUser = async () => {
       //get Auth user
-      const authUser = await Auth.currentAuthenticatedUser({bypassCache: true}) //this call will not use the cache and will actually do a query
+      const authUser = await Auth.currentAuthenticatedUser({bypassCache: true}).catch(console.error) //this call will not use the cache and will actually do a query
       console.log(authUser) 
 
       //query the database using Auth user (SubID)
@@ -37,7 +37,7 @@ function App() {
       console.log(newUser)
       const newUserResponse = await API.graphql(graphqlOperation(createUser, {input: newUser}))
     }
-    syncUser()
+    syncUser().catch(console.error)
   }, [])
   return (
     <View style={styles.container}>

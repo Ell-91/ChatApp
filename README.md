@@ -43,7 +43,7 @@ ChatApp is a full-stack mobile messaging application developed to practice and d
 
 ## Screenshots
 
-<img src="./resources/images/chatPhotos.png">
+<img src="./assets/images/chatPhotos.png">
 
 ## Learning Outcomes
 

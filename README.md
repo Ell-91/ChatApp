@@ -13,7 +13,7 @@ ChatApp is a full-stack mobile messaging application developed to practice and d
 - Gain hands-on experience with AWS cloud services
 - Develop a deep understanding of real-time messaging architecture
 
-## Motivation
+## Tech Stack
 
 ### Frontend
 

@@ -55,7 +55,7 @@ ChatApp is a full-stack mobile messaging application developed to practice and d
 
 ## Credit
 
-Inspired by and developed following the tutorial by notJust.dev
+Inspired by and developed following the tutorial by [notJust.dev](https://www.youtube.com/@notjustdev)
 
 ## Future Improvements
 
